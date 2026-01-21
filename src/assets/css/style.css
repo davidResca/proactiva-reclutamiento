@@ -1,0 +1,341 @@
+:root {
+    --bg-color-base: #0166f2;
+    --bg-color-blue-alt: #121B60;
+
+    --ff-base:  'Mosvita', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color-blue-alt);
+}
+
+.bg-primary{
+    background-color: var(--bg-color-base);
+}
+
+.bg-alt{
+    background-color: var(--bg-color-blue-alt);
+}
+
+.container-padding {
+    padding: 24px 16px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg-color-base);
+    height: 100dvh; 
+    overflow: hidden;
+}
+.hero-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.hero-header p {
+    width: 276px;
+    font-family: var(--ff-base);
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    line-height: 127%;
+    text-align: center;
+
+}
+.hero .proactiva-logo {
+    width: 275px;
+}
+
+.hero .hero-img{
+    flex-shrink: 1; 
+    min-height: 0;  
+    display: flex;  
+    align-items: flex-end;
+}
+.hero .hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.divider{
+  border: 0;              
+  border: 0;            
+  height: 1px;
+  background-color: #333;
+  margin: 15px 0;
+  background-color:white;
+}
+
+
+.section-title{
+    font-family: var(--ff-base);
+    font-size: 28px;
+    line-height: 127%;
+
+    /* color: white; */
+}
+.section-subtitle{
+    font-family: var(--ff-base);
+    font-size: 21px;
+    line-height: 127%;
+}
+.section-text{
+    padding: 16px 0;
+    font-family: var(--ff-base);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-text-footer{
+    font-family: var(--ff-base);
+    font-size-adjust: 21px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+/* BOTON CONOCE MAS - CTA */
+.btn-cta {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    border: 1px solid white;
+    padding: 6px 10px;
+
+    border-radius: 16px;
+    background-color: var(--bg-color-base);
+    transition: all 0.3s ease; 
+}
+.btn-cta img {
+    height: 12px;
+}
+.btn-cta p {
+    z-index: 2;
+    margin: 0;
+    padding-top: 2px;
+    align-self: center;
+    width: max-content;
+
+    font-family: var(--ff-base);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: start;
+    line-height: 1;
+
+    color: white;
+}
+.btn-cta:hover{
+    border: 1px solid var(--bg-color-blue-alt);
+    background-color: var(--bg-color-blue-alt);
+    transition: all 0.3s ease;
+}
+
+
+/* SECCION - COSTO CONTRATACION */
+.section-impacto{
+    padding: 36px 16px;
+    background: white;
+    background: linear-gradient(164deg,rgba(1, 102, 242, 1) 40%, #121B60 80%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+}
+/* Tarjetas de impacto */
+.cards-wrapper{
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-impacto{
+    width: 105px;
+    padding: 16px 4px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    /* border: .5px solid white; */
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.269);
+    backdrop-filter: blur(14px);
+    background-color: rgb(from var(--bg-color-base) r g b / 50%);
+}
+.card-impacto img{
+    height: 40px;
+    max-width: 40px;
+}
+.card-impacto div{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+}
+.card-impacto p{
+    font-family: var(--ff-base);
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: 127%;
+}
+.card-impacto hr{
+    width: 50px;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Marca: Logo */
+.brand-short{
+    width: 100%;
+}
+.brand-short img{
+    margin: auto;
+    width: 100px;
+}
+
+/* SECTION DELEGAR */
+.card-delegar{
+    max-width: 300px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 24px 24px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-delegar h3{
+    margin-left: -3px;
+    font-family: var(--ff-base);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    /* text-align: center; */
+    color: var(--bg-color-blue-alt);
+
+}
+
+.card-delegar p{
+    font-family: var(--ff-base);
+    color: var(--bg-color-base);
+    font-weight: 700;
+    /*font-size: 16px;
+    text-align: center;
+    line-height: 172%; */
+}
+.card-delegar span{
+    color: var(--bg-color-blue-alt);
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+
+.card-entendemos{
+    /* width: 320px; */
+    margin: auto;
+    position: relative;
+}
+
+.card-entendemos-areas{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+/* SECCION SELECCION CON CRITERIO */
+
+.selection-section{
+    background-image: url("../img/selection-desk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    height: 550px;
+}
+
+.selection-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list-item-flex{
+    margin-top: 8px;
+    display: flex;
+    gap: .8rem;
+}
+
+.list-item-flex p{
+    line-height: 124%;
+}
+
+.list-item-flex img{
+    padding-top: 5px;
+    width: 5px;
+    height: 15px;
+}
+
+/* Seccion Especialistas */
+.especialistas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    
+    height: 500px;
+}
+
+
+/* PCOR - Proceso claro orientado a resultados */
+.cards-pcor-wrapper{
+    padding: 36px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+.card-pcor{
+    display: flex;
+    align-items: center;
+    box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.card-pcor-img-wrapper{
+    object-fit: cover;
+    object-position: center;
+    min-width: 50%;
+    height: 350px;
+    overflow: hidden;
+}
+.card-pcor p{
+    font-family: var(--ff-base);
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 5px;
+
+}
+.card-pcor hr{
+    display: none;
+}

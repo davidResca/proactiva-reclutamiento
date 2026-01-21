@@ -1,0 +1,56 @@
+.text-center{
+    text-align: center;
+}
+.color-white{
+    color: white;
+}
+.color-base{
+    color: var(--bg-color-base);
+}
+.color-alt{
+    color: var(--bg-color-blue-alt);
+}
+
+.ff-base{
+    font-family: var(--ff-base);
+}
+
+.fs-16{
+    font-size: 16px;
+}
+.fs-21{
+    font-size: 21px;
+}
+.fs-28{
+    font-size: 28px;
+}
+
+.fw-600{
+    font-weight: 600;
+}
+.fw-regular{
+    font-weight: 400;
+}
+
+.mt-24{
+    margin-top: 24px;
+}
+
+.bg-white{
+    background-color: white;
+}
+.bg-base{
+    background-color: var(--bg-color-base);
+}
+.bg-alt{
+    background-color: var(--bg-color-blue-alt);
+}
+
+.py-36{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.radius-6{
+    border-radius: 6px;
+}

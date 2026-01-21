@@ -1,0 +1,47 @@
+/* 1. Light (300) */
+@font-face {
+    font-family: 'Mosvita';
+    src: url('../fonts/Mosvita-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* 2. Regular (400) */
+@font-face {
+    font-family: 'Mosvita';
+    src: url('../fonts/Mosvita-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 3. Medium (500) */
+@font-face {
+    font-family: 'Mosvita';
+    src: url('../fonts/Mosvita-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* 4. SemiBold (600) */
+@font-face {
+    font-family: 'Mosvita';
+    src: url('../fonts/Mosvita-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* 5. Bold (700) */
+@font-face {
+    font-family: 'Mosvita';
+    src: url('../fonts/Mosvita-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 6. Black (900) */
+@font-face {
+    font-family: 'Mosvita';
+    src: url('../fonts/Mosvita-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
