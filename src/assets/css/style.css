@@ -308,6 +308,7 @@ body{
 .cards-pcor-wrapper{
     padding: 36px 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
@@ -319,6 +320,8 @@ body{
     box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
     border-radius: 6px;
     overflow: hidden;
+    width: 350px;
+    height: 320px;
 }
 
 .card-pcor-img-wrapper{
@@ -338,4 +341,23 @@ body{
 }
 .card-pcor hr{
     display: none;
+}
+
+
+/* Seleccion y fortalecimiento de talento */
+.list-item-center{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 8px 0;
+}
+
+.list-item-center p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.list-item-center .ico-talent{
+    width: 25px;
 }
