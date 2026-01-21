@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/assets/css/fonts.css">
-    <link rel="stylesheet" href="./src/assets/css/reset.css">
-    <link rel="stylesheet" href="./src/assets/css/style.css">
-    <link rel="stylesheet" href="./src/assets/css/generic.css">
+    <link rel="stylesheet" href="./src/css/fonts.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/generic.css">
     <title>Document</title>
 </head>
 
 <body>
+    <header class="nav-bar">
+        <div>
+            <img class="brand-header" src="./src/assets/logo/Logo.png" alt="">
+            <a class="nav-wsp-link" href=""><img src="./src/assets/ico/ico-whatsapp.svg" alt=""></a>
+        </div>
+    </header>
 
     <main>
         <!-- HERO -->
         <section class="hero">
-            <article class="container-padding hero-header" data-aos="fade" data-aos-offset="200" data-aos-delay="50"
+            <article class="container-padding hero-header sentinel" data-aos="fade" data-aos-offset="200" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
                 data-aos-anchor-placement="top-center">
                 <img class="proactiva-logo" src="./src/assets/logo/Logo.png" alt="">
@@ -35,72 +41,72 @@
         </section>
 
         <!-- COSTO MALA CONTRATACION -->
-        <section class="section-impacto" id="decision">
-            <article>
-                <section>
-                    <h2 class="section-title color-white">El verdadero costo de una mala contratación</h2>
-                    <hr class="divider">
-                </section>
-
-                <section>
-                    <p class="section-text color-white">Alta rotación, resultados deficientes y pérdida de productividad
-                        no son
-                        casualidad.</p>
-                    <p class="section-text color-white">Son la consecuencia de procesos de selección mal resueltos en
-                        contextos de
-                        urgencia.</p>
-                </section>
-            </article>
-
-            <!-- Tarjetas de impacto -->
-            <article>
-                <div class="cards-wrapper">
-                    <div class="card-impacto">
-                        <img src="./src/assets/ico/ico-money.svg" alt="">
-                        <div>
-                            <p>Costos ocultos</p>
-                            <hr />
+        <section class="section-impacto">
+            <section id="decision">
+                <article>
+                    <section>
+                        <h2 class="section-title color-white">El verdadero costo de una mala contratación</h2>
+                        <hr class="divider">
+                    </section>
+    
+                    <section>
+                        <p class="section-text color-white">Alta rotación, resultados deficientes y pérdida de productividad
+                            no son
+                            casualidad.</p>
+                        <p class="section-text color-white">Son la consecuencia de procesos de selección mal resueltos en
+                            contextos de
+                            urgencia.</p>
+                    </section>
+                </article>
+    
+                <!-- Tarjetas de impacto -->
+                <article>
+                    <div class="cards-wrapper">
+                        <div class="card-impacto">
+                            <img src="./src/assets/ico/ico-money.svg" alt="">
+                            <div>
+                                <p>Costos ocultos</p>
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="card-impacto">
+                            <img src="./src/assets/ico/ico-low-rentability.svg" alt="">
+                            <div>
+                                <p>Impacto directo en la rentabilidad</p>
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="card-impacto">
+                            <img src="./src/assets/ico/ico-briefcase.svg" alt="">
+                            <div>
+                                <p>Ambientes de trabajo deteriorados</p>
+                                <hr />
+                            </div>
                         </div>
                     </div>
-                    <div class="card-impacto">
-                        <img src="./src/assets/ico/ico-low-rentability.svg" alt="">
-                        <div>
-                            <p>Impacto directo en la rentabilidad</p>
-                            <hr />
-                        </div>
-                    </div>
-                    <div class="card-impacto">
-                        <img src="./src/assets/ico/ico-briefcase.svg" alt="">
-                        <div>
-                            <p>Ambientes de trabajo deteriorados</p>
-                            <hr />
-                        </div>
-                    </div>
+                </article>
+                <!-- Marca -->
+            </section>
+            
+            <!-- DELEGAR -->
+            <article class="section-delegar container-padding">
+                <div class="brand-short">
+                    <img src="./src/assets/logo/Logo.png" alt="">
                 </div>
+                <section class="card-delegar">
+                    <div>
+                        <h3>EL 68%</h3>
+                        <p class="section-title">DE LAS EMPRESAS <span>NO</span> DELEGA SUS BÚSQUEDAS A CONSULTORAS
+                            ESPECIALIZADAS.</p>
+                    </div>
+                </section>
+    
+                <p class="section-text-footer color-white mt-24">DELEGAR BIEN NO ES UN GASTO. ES UNA DECISIÓN
+                    ESTRATÉGICA.</p>
             </article>
         </section>
-
-        <!-- Marca -->
-        <div class="brand-short">
-            <img src="./src/assets/logo/Logo.png" alt="">
-        </div>
-
-        <!-- DELEGAR -->
-        <article class="bg-alt section-delegar container-padding" style="margin-top: 24px;">
-            <section class="card-delegar">
-                <div>
-                    <h3>EL 68%</h3>
-                    <p class="section-title">DE LAS EMPRESAS <span>NO</span> DELEGA SUS BÚSQUEDAS A CONSULTORAS
-                        ESPECIALIZADAS.</p>
-                </div>
-            </section>
-
-            <p class="section-text-footer color-white mt-24">DELEGAR BIEN NO ES UN GASTO. ES UNA DECISIÓN
-                ESTRATÉGICA.</p>
-        </article>
-
         <!-- Entendemos -->
-        <section class="mt-24 bg-white">
+        <section class="bg-white">
             <article class="container-padding">
                 <section class="mt-24">
                     <h2 class="section-title color-base">Entendemos tu industria.</h2>
@@ -241,14 +247,13 @@
         <!-- Fortalecemos talento -->
         <section class="container-padding bg-base">
             <div>
-                <hr class="divider">
                 <h2 class="section-title color-white">No solo seleccionamos talento. Lo fortalecemos.</h2>
                 <hr class="divider">
             </div>
             <div>
                 <p class="section-text color-white mt-24">Acompañamos a las empresas con capacitación y desarrollo, potenciando el desempeño de los equipos una vez incorporados.</p>
                 <p class="section-text color-white">Selección + formación = mejores resultados sostenidos.</p>
-                <ul class="selection-list section-text color-white">
+                <!-- <ul class="selection-list section-text color-white">
                     <li class="list-item-center">
                         <img width="12" src="./src/assets/ico/ico-plus.svg" alt="">
                         <p>150 empresas confían en nuestros servicios</p>
@@ -261,7 +266,7 @@
                         <img width="12" src="./src/assets/ico/ico-plus.svg" alt="">
                         <p>Especialistas y docentes activos en la industria</p>
                     </li>
-                </ul>
+                </ul> -->
                 <article>
                     <div class="cards-wrapper">
                         <div class="card-impacto">
@@ -355,13 +360,13 @@
             <img height="28" src="./src/assets/ico/ico-bna.svg" alt="">
         </div>
         <div>
-            <p class="fw-600 text-center mt-24">© 2026 Proactiva. Todos los derechos reservados.</p>
+            <p class="fs-16 fw-600 text-center mt-24">© 2026 Proactiva. Todos los derechos reservados.</p>
         </div>
     </footer>
 
 
+    <script src="./src/js/navbar.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
         AOS.init();
     </script>

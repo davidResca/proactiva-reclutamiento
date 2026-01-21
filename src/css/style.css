@@ -2,32 +2,67 @@
     --bg-color-base: #0166f2;
     --bg-color-blue-alt: #121B60;
 
-    --ff-base:  'Mosvita', sans-serif;
+    --ff-base: 'Mosvita', sans-serif;
 }
 
-body{
+/* body{
     background-color: var(--bg-color-blue-alt);
-}
+} */
 
-.bg-primary{
+.bg-primary {
     background-color: var(--bg-color-base);
 }
 
-.bg-alt{
+.bg-alt {
     background-color: var(--bg-color-blue-alt);
 }
 
 .container-padding {
     padding: 24px 16px;
 }
+
+.nav-bar {
+    background-color: var(--bg-color-blue-alt);
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    height: 48px;
+    transition:all ease-in-out .5s;
+}
+
+.nav-bar div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar .brand-header {
+    width: 100px;
+}
+
+.nav-bar .nav-wsp-link {
+    right: 16px;
+    position: absolute;
+}
+
+.scrolled {
+    background-color: rgb(from var(--bg-color-blue-alt) r g b / 80%);
+    /* Color cuando se hace scroll */
+    backdrop-filter: blur(2px);
+    transition:all ease-in-out .5s;
+}
+
+
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--bg-color-base);
-    height: 100dvh; 
+    height: 100dvh;
     overflow: hidden;
 }
+
 .hero-header {
     flex: 1;
     display: flex;
@@ -36,6 +71,7 @@ body{
     justify-content: center;
     gap: 1.2rem;
 }
+
 .hero-header p {
     width: 276px;
     font-family: var(--ff-base);
@@ -46,53 +82,57 @@ body{
     text-align: center;
 
 }
+
 .hero .proactiva-logo {
     width: 275px;
 }
 
-.hero .hero-img{
-    flex-shrink: 1; 
-    min-height: 0;  
-    display: flex;  
+.hero .hero-img {
+    flex-shrink: 1;
+    min-height: 40%;
+    display: flex;
     align-items: flex-end;
 }
-.hero .hero-img img{
+
+.hero .hero-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: -20px 0;
 }
 
-.divider{
-  border: 0;              
-  border: 0;            
-  height: 1px;
-  background-color: #333;
-  margin: 15px 0;
-  background-color:white;
+.divider {
+    border: 0;
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin: 15px 0;
+    background-color: white;
 }
 
 
-.section-title{
+.section-title {
     font-family: var(--ff-base);
     font-size: 28px;
     line-height: 127%;
 
     /* color: white; */
 }
-.section-subtitle{
+
+.section-subtitle {
     font-family: var(--ff-base);
     font-size: 21px;
     line-height: 127%;
 }
-.section-text{
+
+.section-text {
     padding: 16px 0;
     font-family: var(--ff-base);
     font-size: 16px;
     font-weight: 600;
 }
 
-.section-text-footer{
+.section-text-footer {
     font-family: var(--ff-base);
     font-size-adjust: 21px;
     font-weight: 600;
@@ -111,11 +151,13 @@ body{
 
     border-radius: 16px;
     background-color: var(--bg-color-base);
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
+
 .btn-cta img {
     height: 12px;
 }
+
 .btn-cta p {
     z-index: 2;
     margin: 0;
@@ -132,7 +174,8 @@ body{
 
     color: white;
 }
-.btn-cta:hover{
+
+.btn-cta:hover {
     border: 1px solid var(--bg-color-blue-alt);
     background-color: var(--bg-color-blue-alt);
     transition: all 0.3s ease;
@@ -140,25 +183,25 @@ body{
 
 
 /* SECCION - COSTO CONTRATACION */
-.section-impacto{
+.section-impacto {
     padding: 36px 16px;
     background: white;
-    background: linear-gradient(164deg,rgba(1, 102, 242, 1) 40%, #121B60 80%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right top;
+    background: linear-gradient(174deg, rgba(1, 102, 242, 1) 10%, #121B60 50%);
 }
+
 /* Tarjetas de impacto */
-.cards-wrapper{
+.cards-wrapper {
+    max-width: 512px;
     padding: 24px 0;
     display: flex;
     justify-content: space-between;
 }
 
-.card-impacto{
-    width: 105px;
+.card-impacto {
+    max-width: 150px;
+    width: 32%;
     padding: 16px 4px;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,18 +215,21 @@ body{
     backdrop-filter: blur(14px);
     background-color: rgb(from var(--bg-color-base) r g b / 50%);
 }
-.card-impacto img{
+
+.card-impacto img {
     height: 40px;
     max-width: 40px;
 }
-.card-impacto div{
+
+.card-impacto div {
     margin-top: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .8rem;
 }
-.card-impacto p{
+
+.card-impacto p {
     font-family: var(--ff-base);
     font-size: 14px;
     font-weight: 500;
@@ -191,34 +237,41 @@ body{
     text-align: center;
     line-height: 127%;
 }
-.card-impacto hr{
+
+.card-impacto hr {
     width: 50px;
     border: 1px solid white;
     color: white;
 }
 
 /* Marca: Logo */
-.brand-short{
+.brand-short {
     width: 100%;
 }
-.brand-short img{
+
+.brand-short img {
     margin: auto;
     width: 100px;
 }
 
 /* SECTION DELEGAR */
-.card-delegar{
+.section-delegar {
+    margin-top: -1px;
+}
+
+.card-delegar {
     max-width: 300px;
     background-color: white;
     border-radius: 6px;
     padding: 24px 24px;
     margin: auto;
+    margin-top: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-delegar h3{
+.card-delegar h3 {
     margin-left: -3px;
     font-family: var(--ff-base);
     font-size: 72px;
@@ -229,7 +282,7 @@ body{
 
 }
 
-.card-delegar p{
+.card-delegar p {
     font-family: var(--ff-base);
     color: var(--bg-color-base);
     font-weight: 700;
@@ -237,20 +290,21 @@ body{
     text-align: center;
     line-height: 172%; */
 }
-.card-delegar span{
+
+.card-delegar span {
     color: var(--bg-color-blue-alt);
     font-weight: 800;
     text-decoration: underline;
 }
 
 
-.card-entendemos{
+.card-entendemos {
     /* width: 320px; */
     margin: auto;
     position: relative;
 }
 
-.card-entendemos-areas{
+.card-entendemos-areas {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -259,7 +313,7 @@ body{
 
 /* SECCION SELECCION CON CRITERIO */
 
-.selection-section{
+.selection-section {
     background-image: url("../img/selection-desk.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -268,44 +322,45 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
+
     height: 550px;
 }
 
-.selection-list{
+.selection-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.list-item-flex{
+
+.list-item-flex {
     margin-top: 8px;
     display: flex;
     gap: .8rem;
 }
 
-.list-item-flex p{
+.list-item-flex p {
     line-height: 124%;
 }
 
-.list-item-flex img{
+.list-item-flex img {
     padding-top: 5px;
     width: 5px;
     height: 15px;
 }
 
 /* Seccion Especialistas */
-.especialistas{
+.especialistas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
-    
+
     height: 500px;
 }
 
 
 /* PCOR - Proceso claro orientado a resultados */
-.cards-pcor-wrapper{
+.cards-pcor-wrapper {
     padding: 36px 0;
     display: flex;
     justify-content: center;
@@ -314,7 +369,7 @@ body{
 }
 
 
-.card-pcor{
+.card-pcor {
     display: flex;
     align-items: center;
     box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
@@ -324,14 +379,15 @@ body{
     height: 320px;
 }
 
-.card-pcor-img-wrapper{
+.card-pcor-img-wrapper {
     object-fit: cover;
     object-position: center;
     min-width: 50%;
     height: 350px;
     overflow: hidden;
 }
-.card-pcor p{
+
+.card-pcor p {
     font-family: var(--ff-base);
     color: white;
     font-size: 21px;
@@ -339,35 +395,37 @@ body{
     padding-left: 5px;
 
 }
-.card-pcor hr{
+
+.card-pcor hr {
     display: none;
 }
 
 
 /* Seleccion y fortalecimiento de talento */
-.list-item-center{
+.list-item-center {
     display: flex;
     align-items: center;
     gap: 0.8rem;
     padding: 8px 0;
 }
 
-.list-item-center p{
+.list-item-center p {
     font-size: 16px;
     font-weight: 700;
     line-height: 1;
 }
 
-.list-item-center .ico-talent{
+.list-item-center .ico-talent {
     width: 25px;
 }
 
-.footer-title{
+/* FOOTER */
+.footer-title {
     font-size: 24px;
     padding: 12px 0;
 }
 
-.footer-terms-policy{
+.footer-terms-policy {
     display: flex;
     flex-direction: column;
 
@@ -377,14 +435,14 @@ body{
     line-height: 200%;
 }
 
-footer ul li{
+footer ul li {
     font-size: 16px;
     font-weight: 700;
     padding: 5px 0;
     line-height: 174%;
 }
 
-footer .footer-entidades-financieras{
+footer .footer-entidades-financieras {
     margin: 24px 0;
     max-width: 375px;
     padding: 21px 0;
