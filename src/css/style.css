@@ -302,6 +302,7 @@
     /* width: 320px; */
     margin: auto;
     position: relative;
+    box-shadow: 8px 8px 16px -8px rgba(0, 0, 0, 0.68);
 }
 
 .card-entendemos-areas {
