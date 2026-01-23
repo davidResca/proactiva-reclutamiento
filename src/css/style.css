@@ -18,7 +18,7 @@
 }
 
 .container-padding {
-    padding: 24px 16px;
+    padding: 36px;
 }
 
 .nav-bar {
@@ -27,6 +27,15 @@
     position: fixed;
     z-index: 99;
     height: 48px;
+    transform: translateY(-100%);
+    transition:all ease-in-out .5s;
+}
+
+.scrolled {
+    transform: translateY(0%);
+    background-color: rgb(from var(--bg-color-base) r g b / 60%);
+    /* Color cuando se hace scroll */
+    backdrop-filter: blur(14px);
     transition:all ease-in-out .5s;
 }
 
@@ -44,13 +53,6 @@
 .nav-bar .nav-wsp-link {
     right: 16px;
     position: absolute;
-}
-
-.scrolled {
-    background-color: rgb(from var(--bg-color-blue-alt) r g b / 80%);
-    /* Color cuando se hace scroll */
-    backdrop-filter: blur(2px);
-    transition:all ease-in-out .5s;
 }
 
 
@@ -105,9 +107,16 @@
     border: 0;
     border: 0;
     height: 1px;
-    background-color: #333;
-    margin: 15px 0;
+    margin: 24px 0;
     background-color: white;
+}
+
+.divider-alt{
+    border: 0;
+    border: 0;
+    height: 1px;
+    margin: 24px 0;
+    background-color: var(--bg-color-base);
 }
 
 
@@ -184,15 +193,13 @@
 
 /* SECCION - COSTO CONTRATACION */
 .section-impacto {
-    padding: 36px 16px;
     background: white;
-    background: linear-gradient(174deg, rgba(1, 102, 242, 1) 10%, #121B60 50%);
+    /* background: linear-gradient(174deg, rgba(1, 102, 242, 1) 10%, #121B60 50%); */
 }
 
 /* Tarjetas de impacto */
 .cards-wrapper {
     max-width: 512px;
-    padding: 24px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -302,6 +309,7 @@
     /* width: 320px; */
     margin: auto;
     position: relative;
+    padding: 8px 8px;
     box-shadow: 8px 8px 16px -8px rgba(0, 0, 0, 0.68);
 }
 
@@ -333,11 +341,22 @@
     justify-content: center;
 }
 
+.selection-list:has(.checks) .list-item-flex{
+    padding: 4px 0;
+}
+
+.selection-list:has(.checks) img{
+    padding-top: 0;
+    height: auto;
+    width: 20px;
+}
+
 .list-item-flex {
     margin-top: 8px;
     display: flex;
     gap: .8rem;
 }
+
 
 .list-item-flex p {
     line-height: 124%;
@@ -354,7 +373,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.5rem;
 
     height: 500px;
 }
@@ -362,13 +380,81 @@
 
 /* PCOR - Proceso claro orientado a resultados */
 .cards-pcor-wrapper {
-    padding: 36px 0;
+    /* padding: 36px 0; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 
+
+.card-pcor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Agregado para centrar bien el texto */
+    box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
+    border-radius: 6px;
+    overflow: hidden;
+    width: 350px;
+    height: 320px;
+    /* Un color de fondo base por si la imagen tarda en cargar */
+    background-color: #333;
+}
+
+.card-pcor > * {
+    position: relative;
+    z-index: 2; /* El contenido (secciones, divs) flota sobre el blur */
+}
+
+
+.card-pcor::before{
+    content: "";
+    position: absolute;
+    inset: 0; 
+    /* backdrop-filter: blur(2px); */
+    /* -webkit-backdrop-filter: blur(2px);  */
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+
+}
+
+.card-pcor-img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Asegura que ocupe todo el alto */
+    inset: 0;
+    z-index: 0;
+}
+
+.card-pcor img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que no se deforme la imagen */
+    object-position: center;
+}
+
+.card-pcor p {
+    position: relative;
+    z-index: 2; /* <--- CLAVE: Encima del blur */
+    font-family: var(--ff-base);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    padding: 24px;
+    /* text-shadow: 0 2px 4px rgba(0,0,0,0.5); */
+}
+
+.card-pcor hr {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+}
+
+/* 
 
 .card-pcor {
     display: flex;
@@ -400,6 +486,8 @@
 .card-pcor hr {
     display: none;
 }
+
+*/
 
 
 /* Seleccion y fortalecimiento de talento */
