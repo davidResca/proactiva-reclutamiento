@@ -20,6 +20,78 @@
 .container-padding {
     padding: 36px;
 }
+@media(min-width: 1024px) {
+    .container-padding {
+        padding: 96px 48px;
+    }
+}
+
+
+/*  TITULO/s DE SECCION */
+.section-title {
+    font-family: var(--ff-base);
+    font-size: 28px;
+    line-height: 127%;
+
+    /* color: white; */
+}
+/*  SUBTITULO/s DE SECCION */
+.section-subtitle {
+    font-family: var(--ff-base);
+    font-size: 21px;
+    line-height: 127%;
+}
+/* PÁRRAFOS */
+.section-text {
+    padding: 16px 0;
+    font-family: var(--ff-base);
+    font-size: 16px;
+    font-weight: 600;
+}
+/* TEXTOS FOOTER */
+.section-text-footer {
+    font-family: var(--ff-base);
+    font-size-adjust: 21px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+@media(min-width: 1024px) {
+    .section-title {
+        font-size: 52px;
+    }
+    .section-text{
+        font-size: 21px;
+    }
+}
+
+/* BARRA DIVISORA */
+.divider {
+    border: 0;
+    border: 0;
+    height: 1px;
+    margin: 24px 0;
+    background-color: white;
+}
+.divider-alt {
+    border: 0;
+    border: 0;
+    height: 1px;
+    margin: 24px 0;
+    background-color: var(--bg-color-base);
+}
+
+/* Marca: Logo */
+.brand-short {
+    width: 100%;
+}
+.brand-short img {
+    margin: auto;
+    width: 100px;
+}
+
+
+/* BARRA NAVEGACION */
 
 .nav-bar {
     background-color: var(--bg-color-blue-alt);
@@ -28,34 +100,30 @@
     z-index: 99;
     height: 48px;
     transform: translateY(-100%);
-    transition:all ease-in-out .5s;
+    transition: all ease-in-out .5s;
 }
-
 .scrolled {
     transform: translateY(0%);
     background-color: rgb(from var(--bg-color-base) r g b / 60%);
     /* Color cuando se hace scroll */
     backdrop-filter: blur(14px);
-    transition:all ease-in-out .5s;
+    transition: all ease-in-out .5s;
 }
-
 .nav-bar div {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .nav-bar .brand-header {
     width: 100px;
 }
-
 .nav-bar .nav-wsp-link {
     right: 16px;
     position: absolute;
 }
 
-
+/* HERO */
 .hero {
     display: flex;
     flex-direction: column;
@@ -64,7 +132,6 @@
     height: 100dvh;
     overflow: hidden;
 }
-
 .hero-header {
     flex: 1;
     display: flex;
@@ -73,7 +140,6 @@
     justify-content: center;
     gap: 1.2rem;
 }
-
 .hero-header p {
     width: 276px;
     font-family: var(--ff-base);
@@ -84,69 +150,19 @@
     text-align: center;
 
 }
-
 .hero .proactiva-logo {
     width: 275px;
 }
-
 .hero .hero-img {
     flex-shrink: 1;
     min-height: 40%;
     display: flex;
     align-items: flex-end;
 }
-
 .hero .hero-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: -20px 0;
-}
-
-.divider {
-    border: 0;
-    border: 0;
-    height: 1px;
-    margin: 24px 0;
-    background-color: white;
-}
-
-.divider-alt{
-    border: 0;
-    border: 0;
-    height: 1px;
-    margin: 24px 0;
-    background-color: var(--bg-color-base);
-}
-
-
-.section-title {
-    font-family: var(--ff-base);
-    font-size: 28px;
-    line-height: 127%;
-
-    /* color: white; */
-}
-
-.section-subtitle {
-    font-family: var(--ff-base);
-    font-size: 21px;
-    line-height: 127%;
-}
-
-.section-text {
-    padding: 16px 0;
-    font-family: var(--ff-base);
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.section-text-footer {
-    font-family: var(--ff-base);
-    font-size-adjust: 21px;
-    font-weight: 600;
-    text-align: center;
-    color: white;
 }
 
 /* BOTON CONOCE MAS - CTA */
@@ -162,11 +178,9 @@
     background-color: var(--bg-color-base);
     transition: all 0.3s ease;
 }
-
 .btn-cta img {
     height: 12px;
 }
-
 .btn-cta p {
     z-index: 2;
     margin: 0;
@@ -183,18 +197,383 @@
 
     color: white;
 }
-
 .btn-cta:hover {
     border: 1px solid var(--bg-color-blue-alt);
     background-color: var(--bg-color-blue-alt);
     transition: all 0.3s ease;
 }
 
+@media(min-width: 1024px) {
+    .hero {
+        background: url("../assets/img/hero-img-dsk.png");
+        background-position: bottom;
+        position: relative;
+        display: block;
+    }
 
-/* SECCION - COSTO CONTRATACION */
+    .hero .hero-header {
+        height: 100%;
+        margin: auto auto;
+        position: relative;
+        z-index: 99;
+        /* background-color: rgba(0, 0, 0, 0.528);
+        backdrop-filter: blur(3px); */
+    }
+
+    .hero .proactiva-logo {
+        width: 400px;
+    }
+
+    .hero .hero-img{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        z-index: 1;
+    }
+    
+    .hero .hero-img img {
+        object-fit: cover;
+    }
+}
+
+
+/* SECCION - El verdadero costo de una mala contratación */
 .section-impacto {
-    background: white;
+    padding: 36px 36px;
+    background-color: white;
     /* background: linear-gradient(174deg, rgba(1, 102, 242, 1) 10%, #121B60 50%); */
+}
+/* "EL 68% DE LAS EMPRESAS NO DELEGA" */
+.card-delegar {
+    /* max-width: 300px; */
+    background-color: white;
+    border-radius: 6px;
+    padding: 24px 24px;
+    margin: auto;
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-delegar h3 {
+    margin-left: -3px;
+    font-family: var(--ff-base);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    /* text-align: center; */
+    color: var(--bg-color-blue-alt);
+
+}
+.card-delegar p {
+    font-family: var(--ff-base);
+    color: var(--bg-color-base);
+    font-weight: 700;
+}
+.card-delegar span {
+    color: var(--bg-color-blue-alt);
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+@media(min-width: 1024px) {
+    .section-impacto {
+        padding: 0;
+        height: 100dvh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-impacto-content {
+        padding: 48px;
+        display: flex;
+        align-items: center;
+        width: 60%;
+        /* justify-content: space-between; */
+    }
+    .card-delegar {
+        height: 100%;
+        width: 40%;
+        margin: 0 0 0 auto;
+        border-radius: 0;
+    }
+    .card-delegar div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 450px;
+
+        position: relative; 
+        z-index: 2;
+    }
+    .card-delegar p{
+        font-size: 48px;
+    }
+}
+
+.section-entendemos{
+    padding: 36px;
+}
+
+.card-entendemos {
+    /* width: 320px; */
+    margin: auto;
+    position: relative;
+    padding: 8px 8px;
+    box-shadow: 8px 8px 16px -8px rgba(0, 0, 0, 0.68);
+}
+.card-entendemos-areas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+@media(min-width: 1024px){
+    .section-entendemos{
+        padding: 48px;
+        position: relative;
+        z-index: 9;
+        width: calc(100% - 96px);
+        margin: auto;
+        margin-top: -50px;
+        margin-bottom: 50px;
+        border-radius: 14px;
+        box-shadow: -4px -4px 24px -4px rgba(0, 0, 0, 0.575);
+    }
+    .section-entendemos h2{
+        width: 22ch;
+        margin: auto;
+        text-align: center;
+    }
+
+    .section-entendemos div{
+        display: flex;
+    }
+
+    .section-entendemos .text-wrapper{
+        width: 50%;
+    }
+
+    .card-entendemos{
+        padding: 36px;
+    }
+    .card-entendemos-areas{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* SECCION SELECCION CON CRITERIO */
+
+.selection-section {
+    background-image: url("../img/selection-desk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 550px;
+}
+.selection-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.selection-list:has(.checks) .list-item-flex {
+    padding: 4px 0;
+}
+.selection-list:has(.checks) img {
+    padding-top: 0;
+    height: auto;
+    width: 20px;
+}
+
+
+.list-item-flex {
+    margin-top: 8px;
+    display: flex;
+    gap: .8rem;
+}
+
+
+.list-item-flex p {
+    line-height: 124%;
+}
+
+.list-item-flex img {
+    padding-top: 5px;
+    width: 5px;
+    height: 15px;
+}
+
+/* Seccion Especialistas */
+.especialistas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 500px;
+}
+
+@media(min-width:1024px){
+    .especialistas{
+        position:relative;
+        z-index: 1;
+        overflow: hidden;
+        transform-origin: top center;
+        max-width: 1440px;
+        width: 100%;
+        height: 100dvh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .especialistas div{
+        width: 45%;
+    }
+    .especialistas .selection-list{
+        width: max-content;
+    }
+    .especialistas .divider{
+        display: none;
+    }
+}
+/* PCOR - Proceso claro orientado a resultados */
+.cards-pcor-wrapper {
+    /* padding: 36px 0; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.card-pcor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Agregado para centrar bien el texto */
+    box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
+    border-radius: 6px;
+    overflow: hidden;
+    width: 350px;
+    height: 320px;
+    /* Un color de fondo base por si la imagen tarda en cargar */
+    background-color: #333;
+}
+.card-pcor>* {
+    position: relative;
+    z-index: 2;
+    /* El contenido (secciones, divs) flota sobre el blur */
+}
+.card-pcor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* backdrop-filter: blur(2px); */
+    /* -webkit-backdrop-filter: blur(2px);  */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+
+}
+.card-pcor-img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Asegura que ocupe todo el alto */
+    inset: 0;
+    z-index: 0;
+}
+.card-pcor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Para que no se deforme la imagen */
+    object-position: center;
+}
+.card-pcor p {
+    position: relative;
+    z-index: 2;
+    /* <--- CLAVE: Encima del blur */
+    font-family: var(--ff-base);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    padding: 24px;
+    /* text-shadow: 0 2px 4px rgba(0,0,0,0.5); */
+}
+.card-pcor hr {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+}
+
+@media(min-width: 1024px){
+    .section-pcor{
+        position: relative;
+        z-index: 10;
+        background-color: white; 
+        /* Truco: La subimos para que su posición "natural" sea tapando la anterior */
+        margin-top: -100vh; 
+        /* Aseguramos que tenga al menos el alto de la pantalla */
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .section-pcor-header{
+        position: sticky;
+        top: 120px;
+    }
+
+    .section-pcor-header .divider-alt{
+        width: 10ch;
+        height: 3px;
+    }
+
+    .cards-pcor-wrapper{
+        flex-wrap: nowrap;
+    }
+
+    .card-pcor{
+        background-color: rgba(255, 255, 255, 0);
+        width: 200px;
+        height: 100%;
+        border-radius: 4px;
+        box-shadow: none;
+    }
+
+    .card-pcor::before{
+        z-index: -99;
+        background: transparent;
+    }
+
+    .card-pcor-img-wrapper{
+        position: relative;
+    }
+
+    .card-pcor img {
+        object-fit: cover;
+    }
+
+    .card-pcor p{
+        height: 100%;
+        padding: 16px 0;
+        color:var(--bg-color-base);
+        text-align: left;
+        font-weight: 700;
+    }
+    .card-pcor hr{
+        height: 4px;
+    }
 }
 
 /* Tarjetas de impacto */
@@ -250,244 +629,6 @@
     border: 1px solid white;
     color: white;
 }
-
-/* Marca: Logo */
-.brand-short {
-    width: 100%;
-}
-
-.brand-short img {
-    margin: auto;
-    width: 100px;
-}
-
-/* SECTION DELEGAR */
-.section-delegar {
-    margin-top: -1px;
-}
-
-.card-delegar {
-    max-width: 300px;
-    background-color: white;
-    border-radius: 6px;
-    padding: 24px 24px;
-    margin: auto;
-    margin-top: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-delegar h3 {
-    margin-left: -3px;
-    font-family: var(--ff-base);
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 1;
-    /* text-align: center; */
-    color: var(--bg-color-blue-alt);
-
-}
-
-.card-delegar p {
-    font-family: var(--ff-base);
-    color: var(--bg-color-base);
-    font-weight: 700;
-    /*font-size: 16px;
-    text-align: center;
-    line-height: 172%; */
-}
-
-.card-delegar span {
-    color: var(--bg-color-blue-alt);
-    font-weight: 800;
-    text-decoration: underline;
-}
-
-
-.card-entendemos {
-    /* width: 320px; */
-    margin: auto;
-    position: relative;
-    padding: 8px 8px;
-    box-shadow: 8px 8px 16px -8px rgba(0, 0, 0, 0.68);
-}
-
-.card-entendemos-areas {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 12px;
-}
-
-/* SECCION SELECCION CON CRITERIO */
-
-.selection-section {
-    background-image: url("../img/selection-desk.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 75%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    height: 550px;
-}
-
-.selection-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.selection-list:has(.checks) .list-item-flex{
-    padding: 4px 0;
-}
-
-.selection-list:has(.checks) img{
-    padding-top: 0;
-    height: auto;
-    width: 20px;
-}
-
-.list-item-flex {
-    margin-top: 8px;
-    display: flex;
-    gap: .8rem;
-}
-
-
-.list-item-flex p {
-    line-height: 124%;
-}
-
-.list-item-flex img {
-    padding-top: 5px;
-    width: 5px;
-    height: 15px;
-}
-
-/* Seccion Especialistas */
-.especialistas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    height: 500px;
-}
-
-
-/* PCOR - Proceso claro orientado a resultados */
-.cards-pcor-wrapper {
-    /* padding: 36px 0; */
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-
-.card-pcor {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Agregado para centrar bien el texto */
-    box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
-    border-radius: 6px;
-    overflow: hidden;
-    width: 350px;
-    height: 320px;
-    /* Un color de fondo base por si la imagen tarda en cargar */
-    background-color: #333;
-}
-
-.card-pcor > * {
-    position: relative;
-    z-index: 2; /* El contenido (secciones, divs) flota sobre el blur */
-}
-
-
-.card-pcor::before{
-    content: "";
-    position: absolute;
-    inset: 0; 
-    /* backdrop-filter: blur(2px); */
-    /* -webkit-backdrop-filter: blur(2px);  */
-    background-color: rgba(0, 0, 0, 0.6); 
-    z-index: 1;
-
-}
-
-.card-pcor-img-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Asegura que ocupe todo el alto */
-    inset: 0;
-    z-index: 0;
-}
-
-.card-pcor img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para que no se deforme la imagen */
-    object-position: center;
-}
-
-.card-pcor p {
-    position: relative;
-    z-index: 2; /* <--- CLAVE: Encima del blur */
-    font-family: var(--ff-base);
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-    padding: 24px;
-    /* text-shadow: 0 2px 4px rgba(0,0,0,0.5); */
-}
-
-.card-pcor hr {
-    margin-top: 0;
-    position: relative;
-    z-index: 2;
-    width: 200px;
-}
-
-/* 
-
-.card-pcor {
-    display: flex;
-    align-items: center;
-    box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
-    border-radius: 6px;
-    overflow: hidden;
-    width: 350px;
-    height: 320px;
-}
-
-.card-pcor-img-wrapper {
-    object-fit: cover;
-    object-position: center;
-    min-width: 50%;
-    height: 350px;
-    overflow: hidden;
-}
-
-.card-pcor p {
-    font-family: var(--ff-base);
-    color: white;
-    font-size: 21px;
-    font-weight: 700;
-    padding-left: 5px;
-
-}
-
-.card-pcor hr {
-    display: none;
-}
-
-*/
 
 
 /* Seleccion y fortalecimiento de talento */
