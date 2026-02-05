@@ -125,12 +125,12 @@
 
 /* HERO */
 .hero {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--bg-color-base);
     height: 100dvh;
-    overflow: hidden;
 }
 .hero-header {
     flex: 1;
@@ -205,9 +205,11 @@
 
 @media(min-width: 1024px) {
     .hero {
+        background-color: var(--bg-color-base);
         background: url("../assets/img/hero-img-dsk.png");
         background-position: bottom;
         position: relative;
+        z-index: 1;
         display: block;
     }
 
@@ -241,6 +243,9 @@
 
 /* SECCION - El verdadero costo de una mala contratación */
 .section-impacto {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
     padding: 36px 36px;
     background-color: white;
     /* background: linear-gradient(174deg, rgba(1, 102, 242, 1) 10%, #121B60 50%); */
@@ -338,8 +343,6 @@
         z-index: 9;
         width: calc(100% - 96px);
         margin: auto;
-        margin-top: -50px;
-        margin-bottom: 50px;
         border-radius: 14px;
         box-shadow: -4px -4px 24px -4px rgba(0, 0, 0, 0.575);
     }
@@ -576,11 +579,15 @@
     }
 }
 
+
+
+.section-desarrollamos-talento{
+    background-color: var(--bg-color-base);
+}
+
 /* Tarjetas de impacto */
 .cards-wrapper {
     max-width: 512px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .card-impacto {
@@ -591,8 +598,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    justify-content: flex-start;
+    /* gap: 5px; */
 
     /* border: .5px solid white; */
     border-radius: 8px;
@@ -602,17 +609,25 @@
     background-color: rgb(from var(--bg-color-base) r g b / 50%);
 }
 
-.card-impacto img {
+/* .card-impacto img {
     height: 40px;
     max-width: 40px;
+} */
+.card-impacto .card-title{
+    font-family: var(--ff-base);
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
 }
-
 .card-impacto div {
-    margin-top: 8px;
+    height: 100%;
+    /* margin-top: 8px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .8rem;
+    justify-content: space-between;
+    gap: .5rem;
 }
 
 .card-impacto p {
@@ -630,8 +645,49 @@
     color: white;
 }
 
+@media(min-width: 1024px){
+    .section-desarrollamos-talento{
+        height: 100dvh;
+    }
+
+    .cards-wrapper{
+        max-width: none;
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .card-impacto{
+        max-width: none;
+        width: 250px;
+        padding: 24px 8px;
+        box-shadow: none;
+    }
+    .card-impacto .card-title{
+        font-size: 64px;
+    }
+    .card-impacto p{
+        font-size: 24px;
+    }
+    .card-impacto hr{
+        width: 75px;
+        border: 2px solid white;
+    }
+}
+
 
 /* Seleccion y fortalecimiento de talento */
+@media(min-width:1024px){
+
+    .section-seleccionar-bien{
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+
 .list-item-center {
     display: flex;
     align-items: center;
@@ -678,4 +734,33 @@ footer .footer-entidades-financieras {
     padding: 21px 0;
     display: flex;
     justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+    footer .footer-content{
+        display: flex;
+        flex-direction: column-reverse;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .footer-contacto{
+        text-align: center;
+    }
+
+    footer .footer-contacto ul{
+        display: flex;
+        gap: 1.2rem;
+    }
+
+    footer .footer-terms-policy{
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    footer .footer-entidades-financieras{
+        width: 100%;
+        margin: auto;
+    }
 }
