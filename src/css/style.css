@@ -103,13 +103,18 @@
 /* BARRA NAVEGACION */
 
 .nav-bar {
-    background-color: var(--bg-color-blue-alt);
+    background-color: var(--bg-color-base);
     width: 100%;
     position: fixed;
     z-index: 99;
-    height: 48px;
-    transform: translateY(-100%);
+    height: 84px;
+    /* transform: translateY(-100%); */
     transition: all ease-in-out .5s;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
 }
 .scrolled {
     transform: translateY(0%);
@@ -125,11 +130,35 @@
     justify-content: center;
 }
 .nav-bar .brand-header {
-    width: 100px;
+    /* width: 150px; */
+    height: 42px;
 }
 .nav-bar .nav-wsp-link {
     right: 16px;
     position: absolute;
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+}
+
+.nav-bar .nav-links li {
+    font-family: var(--ff-base);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
+
+.nav-bar .nav-links li:hover{
+    color: var(--bg-color-blue-alt);
+    
 }
 
 /* HERO */
@@ -215,6 +244,8 @@
         background-color: var(--bg-color-base);
         background: url("../assets/img/hero-img-dsk.png");
         background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         z-index: 1;
         display: block;
@@ -253,9 +284,11 @@
     position: relative;
     z-index: 5;
     overflow: hidden;
-    padding: 36px 36px;
     background-color: white;
     /* background: linear-gradient(174deg, rgba(1, 102, 242, 1) 10%, #121B60 50%); */
+}
+.section-impacto-content{
+    padding: 36px 36px;
 }
 /* "EL 68% DE LAS EMPRESAS NO DELEGA" */
 .card-delegar {
@@ -291,17 +324,26 @@
 }
 @media(min-width: 1024px) {
     .section-impacto {
-        padding: 0;
         height: 100dvh;
-        display: flex;
-        justify-content: space-between;
     }
 
-    .section-impacto-content {
+    .section-impacto-content{
+        padding: 0;
+        margin: auto;
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+
+    }
+
+    .section-impacto-header {
         padding: 48px;
         display: flex;
         align-items: center;
         width: 60%;
+        margin-right: 0;
+        
         /* justify-content: space-between; */
     }
     .card-delegar {
@@ -387,6 +429,7 @@
     }
     .card-que-hacemos-areas ul{
         flex-direction: row;
+        align-items: center;
         justify-content: space-evenly;
         /* flex-direction: column; */
         gap: .5rem;
@@ -398,7 +441,9 @@
         padding: 48px;
         margin: 0;
     }
-
+    .card-que-hacemos{
+        max-width: calc(1440px - 96px);
+    }
     .card-que-hacemos h2{
         font-size: 48px;
         width: 22ch;
@@ -424,37 +469,12 @@
 }
 
 
-/* SECCION SELECCION CON CRITERIO */
-.selection-section {
-    background-image: url("../img/selection-desk.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 75%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    height: 550px;
-}
-.selection-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.selection-list:has(.checks) .list-item-flex {
-    padding: 4px 0;
-}
-.selection-list:has(.checks) img {
-    padding-top: 0;
-    height: auto;
-    width: 20px;
-}
 
 
 .list-item-flex {
     margin-top: 8px;
     display: flex;
+    align-items: center;
     gap: .8rem;
 }
 .list-item-flex p {
@@ -477,13 +497,14 @@
 
 @media(min-width:1024px){
     .especialistas{
+        max-width: 1440px;
+        margin: auto;
         position:relative;
         z-index: 1;
         overflow: hidden;
         /* transform-origin: top center; */
-        max-width: 1440px;
         width: 100%;
-        height: 100dvh;
+        height: 100%;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -572,6 +593,8 @@
 }
 @media(min-width: 1024px){
     .section-pcor{
+        max-width: 1440px;
+        margin: auto;
         /* position: relative; */
         /* z-index: 10; */
         background-color: white; 
@@ -749,6 +772,8 @@
 
 @media(min-width: 1024px){
     .section-desarrollamos-talento{
+        max-width: 1440px;
+        margin: auto;
         position: relative;
         z-index: 9;
         height: 100dvh;
@@ -807,6 +832,8 @@
 @media(min-width:1024px){
 
     .section-seleccionar-bien{
+        max-width: 1440px;
+        margin: auto;
         position: relative;
         z-index: 8;
         height: 100dvh;
@@ -911,4 +938,33 @@ footer .footer-entidades-financieras {
         width: 100%;
         margin: auto;
     }
+}
+
+
+
+/* SECCION SELECCION CON CRITERIO */
+.selection-section {
+    background-image: url("../img/selection-desk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 550px;
+}
+.selection-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.selection-list:has(.checks) .list-item-flex {
+    padding: 4px 0;
+}
+.selection-list:has(.checks) img {
+    padding-top: 0;
+    height: auto;
+    width: 20px;
 }

@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 trigger: ".section-impacto",
                 start: "top 75%",
                 end: "+=2500",
-                scrub: 1, 
+                // scrub: 0, 
             }
         });
 
@@ -251,17 +251,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 stagger: 0.2
             }, "-=0.5")
             
-            .to(".section-impacto", {
-                backgroundColor: "#FFFFFF",
-                duration: 1,
-                ease: "none"
-            })
-            .to(cardInnerContent, {
-                y: 30,
-                autoAlpha: 0,
-                duration: 1,
-                stagger: 0.1
-            }, "<");
+            // .to(".section-impacto", {
+            //     backgroundColor: "#FFFFFF",
+            //     duration: 1,
+            //     ease: "none"
+            // })
+            // .to(cardInnerContent, {
+            //     y: 30,
+            //     autoAlpha: 0,
+            //     duration: 1,
+            //     stagger: 0.1
+            // }, "<");
 
 
         // =====================================================
