@@ -344,7 +344,7 @@
 }
 @media(min-width: 1024px){
     .section-que-hacemos{
-        margin-top: -120px;
+        /* margin-top: -120px; */
         margin-bottom: 25px;
     }
     
@@ -363,6 +363,10 @@
         width: 22ch;
         margin: auto;
         text-align: center;
+    }
+
+    .card-que-hacemos p{
+        padding: 8px 0;
     }
 
     /* .card-que-hacemos div{
@@ -745,7 +749,12 @@
 
 @media(min-width: 1024px){
     .section-desarrollamos-talento{
-        /* height: 100dvh; */
+        position: relative;
+        z-index: 9;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
     }
 
@@ -798,6 +807,8 @@
 @media(min-width:1024px){
 
     .section-seleccionar-bien{
+        position: relative;
+        z-index: 8;
         height: 100dvh;
         display: flex;
         flex-direction: row;

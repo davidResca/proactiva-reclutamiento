@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
         // =====================================================
-        // 2. SECCIÓN ENTENDEMOS
+        // 2. SECCIÓN QUE HACEMOS
         // =====================================================
 
         gsap.from(".section-que-hacemos > *", {
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         ScrollTrigger.create({
             trigger: ".section-que-hacemos",
-            start: "top 90px",
+            start: "top top",
             end: "+=200%",
             pin: true,
             pinSpacing: true,
@@ -346,6 +346,63 @@ document.addEventListener("DOMContentLoaded", (event) => {
             ease: "power1.in",
             onComplete: () => {
                 gsap.set(".especialistas", { willChange: "auto" });
+            }
+        });
+
+        // =====================================================
+        // 3. SECCIÓN ESPECIALISTAS
+        // =====================================================
+
+        ScrollTrigger.create({
+            trigger: ".section-seleccionar-bien",
+            start: "top top",
+            end: "+=3000",
+            pin: true,
+            anticipatePin: 1,
+        });
+
+        tlSpecs = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section-seleccionar-bien",
+                start: "top 100%",
+                end: "+=3500",
+                scrub: 1,
+            }
+        });
+
+        gsap.set(".section-seleccionar-bien", { willChange: "height, padding" });
+
+        tlSpecs.from(".section-seleccionar-bien", {
+            height: 0,
+            paddingTop: 0,
+            paddingBottom: 0,
+            duration: 2,
+            ease: "none"
+        })
+        .from(".section-seleccionar-bien h2, .section-seleccionar-bien p, .section-seleccionar-bien hr", {
+            y: 30,
+            autoAlpha: 0,
+            duration: 1
+        }, "<+=0.5")
+        .from(".section-seleccionar-bien li", {
+            x: -50,
+            autoAlpha: 0,
+            duration: 1,
+            stagger: 0.5
+        }, "-=0.5")
+        
+
+        .to({}, { duration: 2 }) 
+
+
+        .to(".section-seleccionar-bien h2, .section-seleccionar-bien p, .section-seleccionar-bien hr, .section-seleccionar-bien li", {
+            y: 50,
+            autoAlpha: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power1.in",
+            onComplete: () => {
+                gsap.set(".section-seleccionar-bien", { willChange: "auto" });
             }
         });
 
