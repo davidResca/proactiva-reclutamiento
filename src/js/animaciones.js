@@ -268,9 +268,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // 2. SECCIÓN ENTENDEMOS
         // =====================================================
 
-        gsap.from(".section-entendemos > *", {
+        gsap.from(".section-que-hacemos > *", {
             scrollTrigger: {
-                trigger: ".section-entendemos",
+                trigger: ".section-que-hacemos",
                 start: "top 90%", 
                 end: "top 40%",   
                 scrub: 1
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
 
         ScrollTrigger.create({
-            trigger: ".section-entendemos",
+            trigger: ".section-que-hacemos",
             start: "top 90px",
             end: "+=200%",
             pin: true,

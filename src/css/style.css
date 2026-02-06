@@ -58,6 +58,15 @@
 }
 @media(min-width: 1024px) {
     .section-title {
+        font-size: 36px;
+    }
+    .section-text{
+        font-size: 21px;
+    }
+}
+
+@media(min-width: 1224px){
+    .section-title {
         font-size: 52px;
     }
     .section-text{
@@ -164,7 +173,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 /* BOTON CONOCE MAS - CTA */
 .btn-cta {
     display: flex;
@@ -202,7 +210,6 @@
     background-color: var(--bg-color-blue-alt);
     transition: all 0.3s ease;
 }
-
 @media(min-width: 1024px) {
     .hero {
         background-color: var(--bg-color-base);
@@ -282,7 +289,6 @@
     font-weight: 800;
     text-decoration: underline;
 }
-
 @media(min-width: 1024px) {
     .section-impacto {
         padding: 0;
@@ -313,64 +319,108 @@
         position: relative; 
         z-index: 2;
     }
+
+    .card-delegar h3{
+        font-size: 64px;
+    }
     .card-delegar p{
-        font-size: 48px;
+        font-size: 36px;
     }
 }
 
-.section-entendemos{
-    padding: 36px;
-}
-
-.card-entendemos {
+/* QUE HACEMOS */
+.card-que-hacemos {
     /* width: 320px; */
     margin: auto;
     position: relative;
-    padding: 8px 8px;
-    box-shadow: 8px 8px 16px -8px rgba(0, 0, 0, 0.68);
+    /* box-shadow: 8px 8px 16px -8px rgba(0, 0, 0, 0.68); */
 }
-.card-entendemos-areas {
+.card-que-hacemos-areas {
+    margin-top: 36px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 12px;
+    flex-direction: column;
+    color: var(--bg-color-base);
 }
-
 @media(min-width: 1024px){
-    .section-entendemos{
-        padding: 48px;
+    .section-que-hacemos{
+        margin-top: -120px;
+        margin-bottom: 25px;
+    }
+    
+    .card-que-hacemos{
+        background-color: white;
+        padding: 36px;
         position: relative;
         z-index: 9;
-        width: calc(100% - 96px);
+        /* width: calc(100% - 96px); */
+        width: 100%;
         margin: auto;
         border-radius: 14px;
         box-shadow: -4px -4px 24px -4px rgba(0, 0, 0, 0.575);
     }
-    .section-entendemos h2{
+    .card-que-hacemos h2{
         width: 22ch;
         margin: auto;
         text-align: center;
     }
 
-    .section-entendemos div{
+    /* .card-que-hacemos div{
         display: flex;
-    }
+    } */
 
-    .section-entendemos .text-wrapper{
+    /* .card-que-hacemos .text-wrapper{
         width: 50%;
-    }
+    } */
 
-    .card-entendemos{
-        padding: 36px;
+    .card-que-hacemos-areas{
+        padding: 0;
+        color: var(--bg-color-base);
     }
-    .card-entendemos-areas{
-        flex-direction: column;
-        gap: 1.5rem;
+    .card-que-hacemos-areas h3{
+        text-align: center;
+        font-size: 28px;
+    }
+    .card-que-hacemos-areas ul{
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* flex-direction: column; */
+        gap: .5rem;
     }
 }
 
-/* SECCION SELECCION CON CRITERIO */
+@media(min-width: 1224px){
+    .section-que-hacemos{
+        padding: 48px;
+        margin: 0;
+    }
 
+    .card-que-hacemos h2{
+        font-size: 48px;
+        width: 22ch;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* .card-que-hacemos .text-wrapper{
+        display: flex;
+        justify-content: space-evenly;
+    } */
+
+    .card-que-hacemos .text-wrapper p{
+        padding: 8px 16px;
+        /* width: 30%; */
+        /* text-align: center; */
+    }
+    /* .card-que-hacemos .text-wrapper p:nth-child(2){
+        border-right: 1px solid #0166f2;
+        border-left: 1px solid #0166f2;
+
+    } */
+}
+
+
+/* SECCION SELECCION CON CRITERIO */
 .selection-section {
     background-image: url("../img/selection-desk.png");
     background-repeat: no-repeat;
@@ -403,12 +453,9 @@
     display: flex;
     gap: .8rem;
 }
-
-
 .list-item-flex p {
     line-height: 124%;
 }
-
 .list-item-flex img {
     padding-top: 5px;
     width: 5px;
@@ -429,7 +476,7 @@
         position:relative;
         z-index: 1;
         overflow: hidden;
-        transform-origin: top center;
+        /* transform-origin: top center; */
         max-width: 1440px;
         width: 100%;
         height: 100dvh;
@@ -517,56 +564,89 @@
     position: relative;
     z-index: 2;
     width: 200px;
+    margin-bottom: 0;
 }
-
 @media(min-width: 1024px){
     .section-pcor{
-        position: relative;
-        z-index: 10;
+        /* position: relative; */
+        /* z-index: 10; */
         background-color: white; 
         /* Truco: La subimos para que su posición "natural" sea tapando la anterior */
-        margin-top: -100vh; 
+        /* margin-top: -100vh;  */
         /* Aseguramos que tenga al menos el alto de la pantalla */
-        min-height: 100vh;
+        /* min-height: 100vh; */
         display: flex;
         align-items: flex-start;
     }
-
     .section-pcor-header{
+        min-width: 30%;
         position: sticky;
         top: 120px;
     }
-
+    .section-pcor .section-title{
+        text-align: left;
+        font-size: 36px;
+        line-height: 200%;
+    }
     .section-pcor-header .divider-alt{
-        width: 10ch;
-        height: 3px;
+        width: 100%;
+        height: 2px;
+        margin: 16px 0;
     }
-
     .cards-pcor-wrapper{
-        flex-wrap: nowrap;
+        padding: 16px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
-
     .card-pcor{
-        background-color: rgba(255, 255, 255, 0);
-        width: 200px;
+        overflow: visible;
+        width: 250px;
         height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        width: min-content;
         border-radius: 4px;
         box-shadow: none;
     }
-
     .card-pcor::before{
         z-index: -99;
         background: transparent;
     }
+    .card-pcor-img-wrapper{
+        border-radius: 4px;
+        height: 503px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 8px 8px 16px -10px rgba(0, 0, 0, 0.418);
+    }
 
+    .card-pcor img{
+        object-fit: cover;
+    }
+    .card-pcor p{
+        height: 176px;
+        /* width: 100px; */
+        padding: 16px 0;
+        color:var(--bg-color-base);
+        text-align: left;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .card-pcor .divider{
+        background-color: var(--bg-color-base);
+        height: 2px;
+    }
+    /* 
+    .card-pcor::before{
+        z-index: -99;
+        background: transparent;
+    }
     .card-pcor-img-wrapper{
         position: relative;
     }
-
     .card-pcor img {
         object-fit: cover;
     }
-
     .card-pcor p{
         height: 100%;
         padding: 16px 0;
@@ -576,21 +656,43 @@
     }
     .card-pcor hr{
         height: 4px;
+    } */
+}
+@media(min-width: 1360px){
+    .section-pcor{
+        justify-content: space-between;
     }
+    .section-pcor-header{
+        width: 400px;
+    }
+    .section-pcor .section-title {
+        text-align: left;
+        font-size: 52px;
+        line-height: 137%;
+    }
+
 }
 
 
-
+/* DESARROLLAMOS TALENTO OPERATIVO */
 .section-desarrollamos-talento{
     background-color: var(--bg-color-base);
 }
 
 /* Tarjetas de impacto */
 .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     max-width: 512px;
+    padding: 24px 0;
 }
 
-.card-impacto {
+.cards-wrapper img{
+    width: 280px;
+}
+
+/* .card-impacto {
     max-width: 150px;
     width: 32%;
     padding: 16px 4px;
@@ -599,9 +701,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* gap: 5px; */
+    gap: 5px;
 
-    /* border: .5px solid white; */
+    border: .5px solid white;
     border-radius: 8px;
 
     box-shadow: 2px 2px 8px -2px rgba(0, 0, 0, 0.269);
@@ -609,10 +711,6 @@
     background-color: rgb(from var(--bg-color-base) r g b / 50%);
 }
 
-/* .card-impacto img {
-    height: 40px;
-    max-width: 40px;
-} */
 .card-impacto .card-title{
     font-family: var(--ff-base);
     font-size: 24px;
@@ -622,7 +720,7 @@
 }
 .card-impacto div {
     height: 100%;
-    /* margin-top: 8px; */
+    margin-top: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -643,20 +741,41 @@
     width: 50px;
     border: 1px solid white;
     color: white;
-}
+} */
 
 @media(min-width: 1024px){
     .section-desarrollamos-talento{
-        height: 100dvh;
+        /* height: 100dvh; */
+
+    }
+
+    .section-desarrollamos-talento article{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-desarrollamos-talento article div{
+        width: 48%;
+        height: 100%;
+    }
+
+    .section-desarrollamos-talento article div:first-child{
+        padding: 12px 0;
     }
 
     .cards-wrapper{
         max-width: none;
-        width: 100%;
+        flex-direction: column;
         justify-content: center;
-        gap: 1.5rem;
+        align-items: flex-start;
+        gap: 2.5rem;
     }
-    .card-impacto{
+    .cards-wrapper img{
+        margin: 0;
+        width: max-content;
+        max-height: 47px;
+    }
+    /* .card-impacto{
         max-width: none;
         width: 250px;
         padding: 24px 8px;
@@ -671,7 +790,7 @@
     .card-impacto hr{
         width: 75px;
         border: 2px solid white;
-    }
+    } */
 }
 
 
@@ -681,10 +800,28 @@
     .section-seleccionar-bien{
         height: 100dvh;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2.5rem;
     }
+    .section-seleccionar-bien article:first-child{
+        width: 40%;
+    }
+
+    .section-seleccionar-bien article:first-child h2{
+        width: 20ch;
+    }
+
+    .section-seleccionar-bien article:first-child hr{
+        height: 2px;
+        margin: 12px 0 2px 0;
+    }
+
+     .section-seleccionar-bien ul{
+        gap: .2rem;
+     }
+
 }
 
 
