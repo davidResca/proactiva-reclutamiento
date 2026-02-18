@@ -13,12 +13,11 @@
 </head>
 
 <body>
-    <header class="nav-bar">
+    <!-- <header class="nav-bar">
         <div data-aos="fade" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
             data-aos-anchor-placement="top-center">
             <img class="brand-header" src="./src/assets/logo/Proactiva-HR.png" alt="">
-            <!-- <a class="nav-wsp-link" href=""><img src="./src/assets/ico/ico-whatsapp.svg" alt=""></a> -->
         </div>
         <ul class="nav-links">
             <li>
@@ -27,6 +26,39 @@
             <li>
                 <a href="">Postularme</a>
             </li>
+        </ul>
+    </header> -->
+
+    <header>
+        <div class="nav-bar-container">
+            <div class="nav-bar container-padding max-w-1440">
+                <!-- marca -->
+                <div>
+                    <img src="./src/assets/logo/Proactiva-HR.png" width="180px" alt="Proactiva HR">
+                </div>
+                <!-- burger button -->
+                <div id="burger-btn" class="burger-btn">
+                    <img src="./src/assets/ico/burger.svg" alt="Icono de menú hamburguesa">
+                </div>
+
+                <div class="nav-bar-links">
+                    <li class="nav-bar-link">
+                        <a href="#">Ofertas laborales</a>
+                        <div class="nav-rectangle"></div>
+                    </li>
+                    <li class="nav-bar-link">
+                        <a href="#">Postularme</a>
+                        <div class="nav-rectangle"></div>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <!-- menu afuera de nav-bar -->
+        <ul id="nav-menu" class="nav-bar-menu nav-closed container-padding">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Ofertas laborales</a></li>
+            <li><a href="#">Postularme</a></li>
         </ul>
     </header>
 
@@ -238,7 +270,8 @@
         </section>
 
         <!-- Desarrollamos talento -->
-        <section class="container-padding bg-base section-que-hacemos desarrollamos-talento"> <!-- section-desarrollamos-talento -->
+        <section class="container-padding bg-base section-que-hacemos desarrollamos-talento">
+            <!-- section-desarrollamos-talento -->
             <article class="card-que-hacemos bg-base"> <!-- section-desarrollamos-talento-header -->
                 <section class="header-box">
                     <h2 class="section-title color-white">Desarrollamos talento operativo.</h2>
@@ -356,6 +389,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- <script src="./src/js/animaciones.js"></script> -->
+     <script src="./src/js/navbar.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

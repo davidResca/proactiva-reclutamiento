@@ -1,5 +1,5 @@
 /* Navbar OBSERVER */
-const navbar = document.querySelector(".nav-bar");
+const navbar = document.querySelector(".nav-bar-container");
 const sentinel = document.querySelector(".sentinel");
 
 const observer = new IntersectionObserver(
@@ -24,3 +24,18 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(sentinel);
+
+const burger = document.getElementById('burger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+const toggleNavMenu = () => {
+  if (navMenu.classList.contains('nav-open')) {
+    navMenu.classList.remove('nav-open');
+    navMenu.classList.add('nav-closed');
+  } else {
+    navMenu.classList.add('nav-open');
+    navMenu.classList.remove('nav-closed');
+  }
+};
+
+burger.addEventListener('click', toggleNavMenu);
