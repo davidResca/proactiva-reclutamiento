@@ -132,7 +132,7 @@
 }
 
 .nav-bar {
-    max-width: 1344px;
+    /* max-width: 1344px; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -202,7 +202,7 @@
 
 /* Scroll Effect */
 .scrolled {
-    background-color: #0165f2a5;
+    background-color: #0165f2d4;
     backdrop-filter: blur(14px);
     transition: all ease-in .3s;
 }
@@ -452,13 +452,27 @@
     text-decoration: underline;
 }
 
+.badge-delega-wrapper {
+    width: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge-delega {
+    width: 350px;
+    object-fit: cover;
+    height: 350px;
+}
+
 @media(min-width: 1024px) {
     .section-impacto-content {
         padding: 0;
         margin: auto;
         max-width: 1440px;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         height: 100%;
     }
 
@@ -497,7 +511,7 @@
    7. SECCIÓN QUÉ HACEMOS
    ========================================= */
 .card-que-hacemos {
-    margin: auto;
+    /* margin: auto; */
     position: relative;
 }
 
